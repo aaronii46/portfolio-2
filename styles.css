@@ -1,0 +1,47 @@
+/* Subtle radial glow accents */
+.hero-glow {
+  background: radial-gradient(circle at 50% 50%, rgba(234, 88, 12, 0.12), transparent 70%);
+}
+
+.bento-card {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(254, 215, 170, 0.6);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.bento-card:hover {
+  border-color: rgba(251, 146, 60, 0.8);
+  box-shadow: 0 10px 25px -5px rgba(234, 88, 12, 0.08), 0 8px 10px -6px rgba(234, 88, 12, 0.04);
+}
+
+.transition-smooth {
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-container {
+  transition: opacity 0.25s ease-out, visibility 0.25s ease-out;
+}
+
+.modal-content-box {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease-out;
+}
+
+/* Custom scrollbar for sleek inner overflow */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #fcfaf7;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #fed7aa;
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #fb923c;
+}

@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Aaron Gitonga | Web Developer</title>
+    <link rel="icon" type="image/png" href="portfolio_logo.png">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;family=Space+Grotesk:wght@500;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <!-- Tailwind CSS CDN with Forms & Container Queries -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="tailwind.config.js"></script>
+  </head>
+  <body class="bg-[#fcfaf7] text-slate-800 font-sans antialiased selection:bg-brand-500 selection:text-white flex flex-col min-h-screen">
+    <!-- BEGIN: SiteHeader -->
+    <header class="sticky top-0 z-50 bg-[#fcfaf7]/95 backdrop-blur-md border-b border-orange-100/90 shrink-0">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+        <!-- Logo Branding -->
+        <a class="flex items-center gap-3 group" data-purpose="site-logo" href="#home"><div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-brand-600 to-amber-500 flex items-center justify-center text-white font-bold font-display text-base shadow-md shadow-brand-500/20 group-hover:scale-105 transition-smooth">AG </div><div class="flex flex-col"><span class="font-display font-bold text-base text-slate-900 tracking-tight leading-none group-hover:text-brand-600 transition-colors">Aaron Gitonga</span><span class="text-[10px] font-bold text-brand-600 uppercase tracking-widest mt-0.5">Portfolio</span></div></a>
+        <!-- Desktop Navigation Menu -->
+        <nav class="hidden md:flex items-center gap-6 lg:gap-8" data-purpose="desktop-nav">
+          <a class="text-xs font-bold text-brand-600 border-b-2 border-brand-600 pb-0.5" href="#home">Home</a>
+          <a class="text-xs font-semibold text-slate-600 hover:text-brand-600 transition-colors" href="#about">About</a>
+          <a class="text-xs font-semibold text-slate-600 hover:text-brand-600 transition-colors" href="#experience">Experience</a>
+          <a class="text-xs font-semibold text-slate-600 hover:text-brand-600 transition-colors" href="#skills">Skills</a>
+          <a class="text-xs font-semibold text-slate-600 hover:text-brand-600 transition-colors" href="#projects">Designs &amp; Projects</a>
+          <a class="text-xs font-semibold text-slate-600 hover:text-brand-600 transition-colors" href="#contact">Contact</a>
+        </nav>
+        <!-- Quick Action / CTA -->
+        <div class="hidden sm:flex items-center gap-2.5">
+          <a class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-50 text-emerald-700 hover:bg-emerald-100 border border-emerald-200 transition-smooth" href="https://wa.me/254758024953" rel="noopener noreferrer" target="_blank"><i class="fa-brands fa-whatsapp text-sm text-emerald-600"></i> WhatsApp </a>
+          <a class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-gradient-to-r from-brand-600 to-amber-600 text-white shadow-md shadow-brand-600/20 hover:shadow-brand-600/35 hover:-translate-y-0.5 transition-smooth" href="#contact">Hire Me </a>
+        </div>
+        <!-- Mobile Menu Toggle Button -->
+        <button aria-label="Toggle navigation menu" class="md:hidden p-2 rounded-lg text-slate-600 hover:text-brand-600 hover:bg-orange-50 transition-colors" id="mobileMenuBtn"><i class="fa-solid fa-bars text-lg"></i></button>
+      </div>
+      <!-- Mobile Navigation Drawer -->
+      <div class="hidden md:hidden border-b border-orange-100 bg-[#fcfaf7] px-6 py-4 shadow-xl transition-all" id="mobileMenu">
+        <div class="flex flex-col space-y-3">
+          <a class="mobile-nav-link text-slate-700 font-semibold text-sm hover:text-brand-600" href="#home">Home</a>
+          <a class="mobile-nav-link text-slate-700 font-semibold text-sm hover:text-brand-600" href="#about">About</a>
+          <a class="mobile-nav-link text-slate-700 font-semibold text-sm hover:text-brand-600" href="#experience">Experience</a>
+          <a class="mobile-nav-link text-slate-700 font-semibold text-sm hover:text-brand-600" href="#skills">Skills</a>
+          <a class="mobile-nav-link text-slate-700 font-semibold text-sm hover:text-brand-600" href="#projects">Designs &amp; Projects</a>
+          <a class="mobile-nav-link text-slate-700 font-semibold text-sm hover:text-brand-600" href="#contact">Contact</a>
+          <div class="pt-3 border-t border-orange-100 flex items-center gap-2">
+            <a class="flex-1 text-center py-2 text-xs font-bold uppercase tracking-wider rounded-lg bg-emerald-50 text-emerald-700 border border-emerald-200" href="https://wa.me/254758024953" rel="noopener noreferrer" target="_blank"><i class="fa-brands fa-whatsapp mr-1"></i> WhatsApp </a>
+            <a class="flex-1 text-center py-2 text-xs font-bold uppercase tracking-wider rounded-lg bg-brand-600 text-white shadow-sm" href="#contact">Hire Me </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- END: SiteHeader -->
+    <!-- BEGIN: MainContent (Desktop Compact Single-Page Bento Layout) -->
+    <main class="flex-1 flex flex-col justify-center py-3 lg:py-4 px-3 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full" id="home">
+      <!-- Desktop Unified Bento Grid: 12 Columns -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-3.5 sm:gap-4 items-stretch">
+        <!-- ==========================================
+         LEFT WING (Hero + Profile + Bio + Impact)
+         lg:col-span-5
+         ========================================== -->
+        <div class="lg:col-span-5 flex flex-col gap-3.5 sm:gap-4">
+          <!-- Card 1: Hero & Profile Card -->
+          <section class="bento-card rounded-2xl p-4 sm:p-5 relative overflow-hidden flex flex-col justify-between" data-purpose="hero-section">
+            <div class="absolute -right-8 -top-8 w-44 h-44 hero-glow rounded-full pointer-events-none blur-xl"></div>
+            <!-- Top Status & Role Pill -->
+            <div class="flex items-center justify-between gap-2 mb-3.5 relative z-10">
+              <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-brand-50 border border-brand-200 text-brand-700 font-bold text-[11px] uppercase tracking-wider"><i class="fa-solid fa-code text-brand-600 text-xs"></i> Frontend Junior Dev </span>
+              <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 font-semibold text-[11px]"><span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> Available for Hire </span>
+            </div>
+            <!-- Avatar & Identity row -->
+            <div class="flex items-center gap-4 relative z-10 mb-3.5">
+              <div class="relative shrink-0 group">
+                <div class="absolute -inset-1 bg-gradient-to-tr from-brand-500 to-amber-400 rounded-full blur-sm opacity-50 group-hover:opacity-80 transition duration-500"></div>
+                <div class="relative p-1 rounded-full bg-white shadow-md border border-brand-200">
+                  <img alt="Aaron Gitonga - Frontend Junior Developer" class="w-16 h-16 sm:w-20 sm:h-20 object-cover object-top rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1yMI4U4KBGhoo9YZWvm42dSe8hmKEh0GDLjKXUEuqKEGhY-jXOSiHg0uN21QtcX71OJJU1cT4z_5spHDVRiBf-CqeDCfGMO6pbOmmm6g2FGusc4BIfj-0uqStTcMPnAy4FykA5ypw_m_gM26jJgD2CxH1kXO0yxLNghhHCsAklkAlmK8j3YGa-p2OLcewnambnJDSRQDnVO1QRnBejPJdTtXV6cGw_2zoFbpGcGV3gQpmAmttxV53_VTWHbGPyONIAzw">
+                </div>
+              </div>
+              <div>
+                <h1 class="font-display text-xl sm:text-2xl font-black text-slate-900 tracking-tight leading-none">
+                  Aaron 
+                  <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-amber-600">Gitonga</span>
+                </h1>
+                <p class="text-xs font-semibold text-brand-600 mt-1">Nairobi, Kenya • 2+ Years Experience</p>
+                <p class="text-[11px] text-slate-500 mt-0.5">Creating client-focused websites &amp; dynamic UI</p>
+              </div>
+            </div>
+            <!-- Quote / Statement -->
+            <blockquote class="text-xs sm:text-[13px] text-slate-700 leading-relaxed italic bg-orange-50/70 border-l-2 border-brand-500 pl-3 py-1.5 rounded-r-lg mb-3.5" id="about">"It's all about the client's satisfaction and taste, work with me and my team to create you a website that proves worth it!" </blockquote>
+            <!-- Action CTAs & Socials -->
+            <div class="pt-2 border-t border-orange-100 flex flex-wrap items-center justify-between gap-2.5 relative z-10">
+              <div class="flex items-center gap-2">
+                <a class="px-3.5 py-1.5 rounded-xl bg-gradient-to-r from-brand-600 to-amber-600 text-white font-bold text-xs shadow-sm hover:shadow-brand-600/30 hover:-translate-y-0.5 transition-smooth inline-flex items-center gap-1.5" href="#projects"><span class="">Explore Projects</span><i class="fa-solid fa-arrow-right text-[10px]"></i></a>
+                <a class="px-3 py-1.5 rounded-xl bg-white text-slate-700 hover:text-brand-600 font-bold text-xs border border-orange-200 hover:border-brand-400 hover:bg-orange-50/40 shadow-xs transition-smooth inline-flex items-center gap-1" href="#contact"><span class="">Contact</span><i class="fa-regular fa-envelope text-brand-600 text-xs"></i></a>
+              </div>
+              <!-- Social Links -->
+              <div class="flex items-center gap-1.5" data-purpose="hero-socials">
+                <a aria-label="Instagram" class="w-7 h-7 rounded-lg bg-white border border-orange-200/80 flex items-center justify-center text-slate-600 hover:text-brand-600 hover:bg-orange-50 transition-smooth shadow-xs text-xs" href="https://instagram.com" rel="noopener noreferrer" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a aria-label="Facebook" class="w-7 h-7 rounded-lg bg-white border border-orange-200/80 flex items-center justify-center text-slate-600 hover:text-blue-600 hover:bg-blue-50 transition-smooth shadow-xs text-xs" href="https://facebook.com" rel="noopener noreferrer" target="_blank"><i class="fa-brands fa-facebook-f text-[11px]"></i></a>
+                <a aria-label="LinkedIn" class="w-7 h-7 rounded-lg bg-white border border-orange-200/80 flex items-center justify-center text-slate-600 hover:text-[#0A66C2] hover:bg-blue-50 transition-smooth shadow-xs text-xs" href="https://www.linkedin.com/in/aaron-gitonga-kinyua/" rel="noopener noreferrer" target="_blank" title="https://www.linkedin.com/in/aaron-gitonga-kinyua/"><i class="fa-brands fa-linkedin-in text-[11px]"></i></a>
+                <a aria-label="GitHub profile" class="w-7 h-7 rounded-lg bg-white border border-orange-200/80 flex items-center justify-center text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-smooth shadow-xs text-xs" href="https://github.com/aaronii46" rel="noopener noreferrer" target="_blank" title="https://github.com/aaronii46"><i class="fa-brands fa-github text-xs"></i></a>
+                <a aria-label="X Twitter" class="w-7 h-7 rounded-lg bg-white border border-orange-200/80 flex items-center justify-center text-slate-600 hover:text-black hover:bg-slate-100 transition-smooth shadow-xs text-xs" href="https://twitter.com" rel="noopener noreferrer" target="_blank"><i class="fa-brands fa-x-twitter text-[11px]"></i></a>
+              </div>
+            </div>
+          </section>
+          <!-- Card 2: Impact Metrics Ribbon (Compact Grid 2x2) -->
+          <section class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-2 gap-2.5" data-purpose="highlights-strip">
+            <div class="bento-card rounded-xl p-2.5 flex items-center gap-2.5">
+              <div class="w-8 h-8 rounded-lg bg-brand-500 text-white flex items-center justify-center text-sm shrink-0 shadow-xs">
+                <i class="fa-solid fa-business-time"></i>
+              </div>
+              <div class="min-w-0">
+                <p class="text-sm font-black font-display text-slate-900 leading-tight">2+ Years</p>
+                <p class="text-[10px] font-semibold text-slate-500 truncate">Website Creation</p>
+              </div>
+            </div>
+            <div class="bento-card rounded-xl p-2.5 flex items-center gap-2.5">
+              <div class="w-8 h-8 rounded-lg bg-amber-500 text-white flex items-center justify-center text-sm shrink-0 shadow-xs">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+              <div class="min-w-0">
+                <p class="text-sm font-black font-display text-slate-900 leading-tight">100%</p>
+                <p class="text-[10px] font-semibold text-slate-500 truncate">Client Satisfaction</p>
+              </div>
+            </div>
+            <div class="bento-card rounded-xl p-2.5 flex items-center gap-2.5">
+              <div class="w-8 h-8 rounded-lg bg-brand-600 text-white flex items-center justify-center text-sm shrink-0 shadow-xs">
+                <i class="fa-solid fa-layer-group"></i>
+              </div>
+              <div class="min-w-0">
+                <p class="text-sm font-black font-display text-slate-900 leading-tight">4 Core</p>
+                <p class="text-[10px] font-semibold text-slate-500 truncate">Featured Systems</p>
+              </div>
+            </div>
+            <div class="bento-card rounded-xl p-2.5 flex items-center gap-2.5">
+              <div class="w-8 h-8 rounded-lg bg-slate-800 text-white flex items-center justify-center text-sm shrink-0 shadow-xs">
+                <i class="fa-solid fa-mobile-screen"></i>
+              </div>
+              <div class="min-w-0">
+                <p class="text-sm font-black font-display text-slate-900 leading-tight">Responsive</p>
+                <p class="text-[10px] font-semibold text-slate-500 truncate">HTML • CSS • JS</p>
+              </div>
+            </div>
+          </section>
+          <!-- Card 3: Experience & Core Tech Stack Overview -->
+          <section class="bento-card rounded-2xl p-4 flex flex-col justify-between" data-purpose="experience-and-skills" id="experience">
+            <div class="flex items-center justify-between mb-2" id="skills">
+              <div class="flex items-center gap-2">
+                <div class="w-6 h-6 rounded-md bg-brand-100 text-brand-600 flex items-center justify-center text-xs">
+                  <i class="fa-solid fa-laptop-code"></i>
+                </div>
+                <h3 class="text-xs font-bold uppercase tracking-wider text-slate-900 font-display">Experience &amp; Tech Stack</h3>
+              </div>
+              <span class="px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 text-[10px] font-bold">2023 - Present</span>
+            </div>
+            <div class="grid grid-cols-4 gap-1.5 mb-2 text-center">
+              <div class="p-1.5 rounded-lg bg-orange-50/60 border border-orange-200/70 hover:bg-orange-100/50 transition-colors">
+                <i class="fa-brands fa-html5 text-orange-600 text-base"></i>
+                <div class="font-bold text-[10px] text-slate-900 mt-0.5">HTML5</div>
+                <div class="text-[8px] text-orange-600 font-semibold uppercase tracking-wider">Advanced</div>
+              </div>
+              <div class="p-1.5 rounded-lg bg-blue-50/60 border border-blue-200/70 hover:bg-blue-100/50 transition-colors">
+                <i class="fa-brands fa-css3-alt text-blue-600 text-base"></i>
+                <div class="font-bold text-[10px] text-slate-900 mt-0.5">CSS3</div>
+                <div class="text-[8px] text-blue-600 font-semibold uppercase tracking-wider">Advanced</div>
+              </div>
+              <div class="p-1.5 rounded-lg bg-amber-50/60 border border-amber-200/70 hover:bg-amber-100/50 transition-colors">
+                <i class="fa-brands fa-js text-amber-500 text-base"></i>
+                <div class="font-bold text-[10px] text-slate-900 mt-0.5">JAVASCRIPT</div>
+                <div class="text-[8px] text-amber-600 font-semibold uppercase tracking-wider">Intermediate</div>
+              </div>
+              <div class="p-1.5 rounded-lg bg-emerald-50/60 border border-emerald-200/70 hover:bg-emerald-100 transition-colors">
+                <i class="fa-solid fa-wand-magic-sparkles text-emerald-600 text-base"></i>
+                <div class="font-bold text-[10px] text-slate-900 mt-0.5 truncate">DATA ANNOTATION</div>
+                <div class="text-[8px] text-emerald-700 font-semibold uppercase tracking-wider">Certified</div>
+              </div>
+            </div>
+            <div class="mb-2 p-1.5 rounded-lg bg-gradient-to-r from-emerald-50 to-amber-50/60 border border-emerald-200/80 flex items-center justify-between gap-1.5">
+              <div class="flex items-center gap-1.5 min-w-0">
+                <div class="w-5 h-5 rounded bg-emerald-500 text-white flex items-center justify-center text-[10px] shrink-0">
+                  <i class="fa-solid fa-wand-magic-sparkles"></i>
+                </div>
+                <div class="min-w-0">
+                  <span class="text-[10px] font-bold text-slate-900 truncate block">Forage Academy Certified</span>
+                  <span class="text-[9px] text-emerald-700 font-medium block">Data Annotation &amp; AI Training Standards</span>
+                </div>
+              </div>
+              <span class="px-1.5 py-0.5 rounded bg-white text-emerald-700 font-mono text-[9px] font-bold border border-emerald-200 shrink-0">Verified</span>
+            </div>
+            <div class="flex flex-wrap items-center gap-1 text-[10px]">
+              <span class="px-2 py-0.5 rounded bg-slate-100 text-slate-700 font-medium">Data Annotation</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 text-slate-700 font-medium">Responsive Design</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 text-slate-700 font-medium">Tailwind CSS</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 text-slate-700 font-medium">Form Validation</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 text-slate-700 font-medium">Git</span>
+              <span class="px-2 py-0.5 rounded bg-brand-50 text-brand-700 font-semibold border border-brand-200">Semantic UI</span>
+            </div>
+          </section>
+        </div>
+        <!-- ==========================================
+         RIGHT WING (Featured 4 Projects + Contact Dock)
+         lg:col-span-7
+         ========================================== -->
+        <div class="lg:col-span-7 flex flex-col gap-3.5 sm:gap-4 justify-between">
+          <!-- Card 4: Featured Projects Showcase Header + 4 Cards Grid -->
+          <section class="bento-card rounded-2xl p-4 sm:p-5 flex-1 flex flex-col justify-between" data-purpose="designs-showcase" id="projects">
+            <!-- Showcase Header -->
+            <div class="flex items-center justify-between mb-3 pb-2.5 border-b border-orange-100">
+              <div>
+                <div class="flex items-center gap-2">
+                  <span class="inline-block px-2 py-0.5 rounded-full bg-brand-100/90 text-brand-700 text-[10px] font-bold tracking-wider uppercase">Featured Work </span>
+                  <span class="text-[11px] font-bold text-slate-400">4 Active Systems</span>
+                </div>
+                <h2 class="text-base sm:text-lg font-extrabold font-display text-slate-900 tracking-tight mt-0.5">Designs &amp; Web Architectures </h2>
+              </div>
+              <button class="project-modal-trigger inline-flex items-center gap-1 text-[11px] font-bold text-brand-600 hover:text-brand-700 group transition-all" data-project="job-app" type="button"><span class="">Case Studies</span><i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-0.5 transition-transform"></i></button>
+            </div>
+            <!-- 4 Projects Bento Subgrid (2x2) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3 flex-1">
+              <!-- System 1: Job Application Website -->
+              <article class="rounded-xl border border-orange-200/80 bg-white hover:border-brand-400 shadow-xs hover:shadow-md transition-all duration-200 group flex flex-col justify-between cursor-pointer p-3" data-project="job-app" data-purpose="project-card">
+                <div>
+                  <div class="flex items-center justify-between gap-1 mb-1.5">
+                    <span class="px-2 py-0.5 rounded text-[9px] font-bold tracking-wide uppercase bg-indigo-50 text-indigo-700 border border-indigo-100">Web App </span>
+                    <span class="text-[10px] font-bold text-slate-400 group-hover:text-brand-600 flex items-center gap-0.5 transition-colors">Preview <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i></span>
+                  </div>
+                  <h3 class="text-xs sm:text-sm font-bold font-display text-slate-900 group-hover:text-brand-600 transition-colors">Job Application Website </h3>
+                  <p class="text-slate-600 text-[11px] leading-relaxed mt-1 line-clamp-2">Categorized vacancies, resume uploads, multi-step application wizard, and candidate alerts. </p>
+                </div>
+                <div class="mt-2.5 pt-2 border-t border-slate-100 flex items-center justify-between text-[10px] text-slate-500 font-semibold">
+                  <span class="flex items-center gap-1 text-emerald-600"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Production</span>
+                  <span class="font-mono text-[9px] bg-slate-50 px-1.5 py-0.5 rounded">Form Validation</span>
+                </div>
+              </article>
+              <!-- System 2: Portfolio Website -->
+              <article class="rounded-xl border border-orange-200/80 bg-white hover:border-brand-400 shadow-xs hover:shadow-md transition-all duration-200 group flex flex-col justify-between cursor-pointer p-3" data-project="portfolio" data-purpose="project-card">
+                <div>
+                  <div class="flex items-center justify-between gap-1 mb-1.5">
+                    <span class="px-2 py-0.5 rounded text-[9px] font-bold tracking-wide uppercase bg-amber-50 text-amber-800 border border-amber-100">Personal Brand </span>
+                    <span class="text-[10px] font-bold text-slate-400 group-hover:text-brand-600 flex items-center gap-0.5 transition-colors">Preview <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i></span>
+                  </div>
+                  <h3 class="text-xs sm:text-sm font-bold font-display text-slate-900 group-hover:text-brand-600 transition-colors">Portfolio Website </h3>
+                  <p class="text-slate-600 text-[11px] leading-relaxed mt-1 line-clamp-2">High-converting developer portfolio highlighting client satisfaction, speed, and modern UX. </p>
+                </div>
+                <div class="mt-2.5 pt-2 border-t border-slate-100 flex items-center justify-between text-[10px] text-slate-500 font-semibold">
+                  <span class="flex items-center gap-1 text-emerald-600"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Live</span>
+                  <span class="font-mono text-[9px] bg-slate-50 px-1.5 py-0.5 rounded">Tailwind • Responsive</span>
+                </div>
+              </article>
+              <!-- System 3: Form Query Website -->
+              <article class="rounded-xl border border-orange-200/80 bg-white hover:border-brand-400 shadow-xs hover:shadow-md transition-all duration-200 group flex flex-col justify-between cursor-pointer p-3" data-project="form-query" data-purpose="project-card">
+                <div>
+                  <div class="flex items-center justify-between gap-1 mb-1.5">
+                    <span class="px-2 py-0.5 rounded text-[9px] font-bold tracking-wide uppercase bg-emerald-50 text-emerald-800 border border-emerald-100">Interactive Tool </span>
+                    <span class="text-[10px] font-bold text-slate-400 group-hover:text-brand-600 flex items-center gap-0.5 transition-colors">Preview <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i></span>
+                  </div>
+                  <h3 class="text-xs sm:text-sm font-bold font-display text-slate-900 group-hover:text-brand-600 transition-colors">Form Query Website </h3>
+                  <p class="text-slate-600 text-[11px] leading-relaxed mt-1 line-clamp-2">Survey interface with real-time field validation, conditional logic, and customer feedback flow. </p>
+                </div>
+                <div class="mt-2.5 pt-2 border-t border-slate-100 flex items-center justify-between text-[10px] text-slate-500 font-semibold">
+                  <span class="flex items-center gap-1 text-emerald-600"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Production</span>
+                  <span class="font-mono text-[9px] bg-slate-50 px-1.5 py-0.5 rounded">JS Logic • Sanitized</span>
+                </div>
+              </article>
+              <!-- System 4: Shopping Website -->
+              <article class="rounded-xl border border-orange-200/80 bg-white hover:border-brand-400 shadow-xs hover:shadow-md transition-all duration-200 group flex flex-col justify-between cursor-pointer p-3" data-project="shopping" data-purpose="project-card">
+                <div>
+                  <div class="flex items-center justify-between gap-1 mb-1.5">
+                    <span class="px-2 py-0.5 rounded text-[9px] font-bold tracking-wide uppercase bg-rose-50 text-rose-800 border border-rose-100">E-Commerce </span>
+                    <span class="text-[10px] font-bold text-slate-400 group-hover:text-brand-600 flex items-center gap-0.5 transition-colors">Preview <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i></span>
+                  </div>
+                  <h3 class="text-xs sm:text-sm font-bold font-display text-slate-900 group-hover:text-brand-600 transition-colors">Market-place</h3>
+                  <p class="text-slate-600 text-[11px] leading-relaxed mt-1 line-clamp-2">Market place with dynamic item filtering, reactive cart counter, product modals, and checkout. </p>
+                </div>
+                <div class="mt-2.5 pt-2 border-t border-slate-100 flex items-center justify-between text-[10px] text-slate-500 font-semibold">
+                  <span class="flex items-center gap-1 text-blue-600"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span> Commercial</span>
+                  <span class="font-mono text-[9px] bg-slate-50 px-1.5 py-0.5 rounded">Cart State • Catalog</span>
+                </div>
+              </article>
+            </div>
+          </section>
+          <!-- Card 5: Quick Connect / Contact Dock -->
+          <section class="bento-card rounded-2xl p-3.5 sm:p-4 bg-gradient-to-br from-white via-orange-50/40 to-amber-50/30" data-purpose="contact-section" id="contact">
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-3">
+              <!-- Connect Title & Prompt -->
+              <div class="text-center sm:text-left">
+                <span class="text-[10px] font-bold uppercase tracking-wider text-brand-700 bg-brand-100/70 px-2 py-0.5 rounded-full inline-block mb-1">Let's Connect </span>
+                <h4 class="text-sm font-bold text-slate-900 font-display">Ready to Build Your Website?</h4>
+                <p class="text-[11px] text-slate-600">Fast turnaround, responsive standards, 95% satisfaction focus.</p>
+              </div>
+              <!-- 3 Quick Contact Action Buttons -->
+              <div class="flex flex-wrap items-center justify-center sm:justify-end gap-2 w-full sm:w-auto">
+                <!-- WhatsApp -->
+                <a class="flex items-center gap-1.5 px-3 py-1.5 bg-white border border-emerald-200 hover:border-emerald-400 hover:bg-emerald-50/50 rounded-xl text-[11px] font-bold text-slate-800 transition-smooth shadow-xs" href="https://wa.me/254758024953" rel="noopener noreferrer" target="_blank"><div class="w-5 h-5 rounded-md bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs"><i class="fa-brands fa-whatsapp"></i></div><span class="">WhatsApp: <strong class="text-emerald-700 font-mono text-[10px]">+254 758 024 953</strong></span></a>
+                <!-- Direct Call -->
+                <a class="flex items-center gap-1.5 px-3 py-1.5 bg-gradient-to-r from-brand-600 to-amber-600 text-white rounded-xl text-[11px] font-bold transition-smooth shadow-xs hover:shadow-brand-600/30" href="tel:0758024953"><i class="fa-solid fa-phone text-[10px]"></i><span class="">Call: <strong class="font-mono text-[10px]">0758024953</strong></span></a>
+                <!-- Direct Email -->
+                <a class="flex items-center gap-1.5 px-3 py-1.5 bg-white border border-orange-200 hover:border-brand-400 hover:bg-orange-50/50 rounded-xl text-[11px] font-bold text-slate-800 transition-smooth shadow-xs" href="mailto:gitongaaaron46@gmail.com"><div class="w-5 h-5 rounded-md bg-orange-100 text-brand-600 flex items-center justify-center text-xs"><i class="fa-regular fa-envelope"></i></div><span class="truncate max-w-[150px] sm:max-w-none text-[10px] font-mono">gitongaaaron46@gmail.com</span></a>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+    <!-- END: MainContent -->
+    <!-- BEGIN: SiteFooter (Compact Bar) -->
+    <footer class="bg-gradient-to-r from-brand-600 via-amber-600 to-orange-500 text-white py-2.5 px-4 sm:px-6 lg:px-8 mt-auto shrink-0" data-purpose="site-footer">
+      <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-xs">
+        <!-- Brand and copyright -->
+        <div class="flex items-center gap-2 text-center sm:text-left">
+          <div class="w-5 h-5 rounded bg-white text-brand-600 flex items-center justify-center font-bold text-[10px]">AG </div>
+          <p class="font-medium text-[11px]">
+            © 2025 Aaron Gitonga. All rights reserved. • 
+            <span class="text-white/85">Frontend Junior Developer</span>
+          </p>
+        </div>
+        <!-- Quick social links and Back to top -->
+        <div class="flex items-center gap-3">
+          <div class="flex items-center gap-2 text-white/90">
+            <a aria-label="Instagram" class="hover:text-white transition-colors" href="https://instagram.com" rel="noopener noreferrer" target="_blank"><i class="fa-brands fa-instagram text-xs"></i></a>
+            <a aria-label="Facebook" class="hover:text-white transition-colors" href="https://facebook.com" rel="noopener noreferrer" target="_blank"><i class="fa-brands fa-facebook-f text-xs"></i></a>
+            <a aria-label="LinkedIn" class="hover:text-white transition-colors" href="https://www.linkedin.com/in/aaron-gitonga-kinyua/" rel="noopener noreferrer" target="_blank" title="https://www.linkedin.com/in/aaron-gitonga-kinyua/"><i class="fa-brands fa-linkedin-in text-xs"></i></a>
+            <a aria-label="GitHub profile" class="hover:text-white transition-colors" href="https://github.com/aaronii46" rel="noopener noreferrer" target="_blank" title="https://github.com/aaronii46"><i class="fa-brands fa-github text-xs"></i></a>
+            <a aria-label="X Twitter" class="hover:text-white transition-colors" href="https://twitter.com" rel="noopener noreferrer" target="_blank"><i class="fa-brands fa-x-twitter text-xs"></i></a>
+          </div>
+          <span class="text-white/40">|</span>
+          <a aria-label="Back to top" class="inline-flex items-center gap-1 text-[10px] font-bold uppercase tracking-wider bg-white/20 hover:bg-white/30 px-2 py-0.5 rounded-full transition-smooth" href="#home"><span class="">Top</span> <i class="fa-solid fa-arrow-up text-[8px]"></i></a>
+        </div>
+      </div>
+    </footer>
+    <!-- END: SiteFooter -->
+    <!-- BEGIN: ProjectModalDialog -->
+    <div aria-hidden="true" aria-modal="true" class="modal-container fixed inset-0 z-[100] flex items-center justify-center p-3 sm:p-6 opacity-0 pointer-events-none transition-all duration-300" id="projectModal" role="dialog">
+      <!-- Backdrop with blur -->
+      <div class="absolute inset-0 bg-slate-950/70 backdrop-blur-md transition-opacity duration-300" id="modalBackdrop"></div>
+      <!-- Dialog Box -->
+      <div class="modal-content-box relative w-full max-w-2xl max-h-[90vh] bg-white rounded-2xl shadow-2xl border border-orange-100 flex flex-col overflow-hidden transform scale-95 transition-all duration-300 z-10">
+        <!-- Modal Header Banner -->
+        <div class="relative p-5 text-white flex flex-col justify-between" id="modalHeaderBg">
+          <div class="flex items-center justify-between mb-3 relative z-10">
+            <div class="flex items-center gap-2">
+              <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-white/25 backdrop-blur-md" id="modalCategoryBadge">Category</span>
+              <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-500/90 text-white backdrop-blur-md flex items-center gap-1" id="modalStatusBadge"><span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span><span id="modalStatusText" class="">Production Ready</span></span>
+            </div>
+            <button aria-label="Close modal window" class="w-7 h-7 rounded-full bg-white/20 hover:bg-white text-white hover:text-slate-900 flex items-center justify-center transition-all duration-200" id="modalCloseBtn"><i class="fa-solid fa-xmark text-sm"></i></button>
+          </div>
+          <div class="relative z-10">
+            <span class="text-[10px] font-bold uppercase tracking-widest text-orange-200 font-mono" id="modalTagline">Portal Architecture</span>
+            <h3 class="text-xl sm:text-2xl font-extrabold font-display tracking-tight text-white mt-0.5" id="modalTitle">Project Title</h3>
+            <p class="text-white/80 text-xs mt-0.5" id="modalShortDesc">Short description of project</p>
+          </div>
+        </div>
+        <!-- Modal Body (Scrollable) -->
+        <div class="p-5 overflow-y-auto space-y-4 flex-1 text-slate-700 custom-scrollbar text-xs">
+          <!-- Browser / UI Mockup Presentation Card -->
+          <div class="rounded-xl border border-slate-200 overflow-hidden bg-slate-50 shadow-xs" id="modalMockupWrapper">
+            <div class="bg-slate-200/80 px-3 py-1.5 flex items-center gap-2 border-b border-slate-300">
+              <div class="flex items-center gap-1">
+                <span class="w-2.5 h-2.5 rounded-full bg-rose-400 inline-block"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-amber-400 inline-block"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 inline-block"></span>
+              </div>
+              <div class="flex-1 max-w-xs mx-auto bg-white/90 rounded px-2 py-0.5 text-[10px] font-mono text-slate-500 text-center truncate flex items-center justify-center gap-1">
+                <i class="fa-solid fa-lock text-[9px] text-emerald-600"></i>
+                <span id="modalBrowserUrl" class="">https://aarongitonga.dev</span>
+              </div>
+            </div>
+            <div class="p-4 bg-white" id="modalMockupContent">
+              <!-- Dynamic Mockup injected via JS -->
+            </div>
+          </div>
+          <!-- Project Overview Section -->
+          <div>
+            <h4 class="text-xs font-bold font-display text-slate-900 mb-1 flex items-center gap-1.5">
+              <i class="fa-solid fa-circle-info text-brand-500 text-xs"></i>
+              Project Overview 
+            </h4>
+            <p class="text-slate-600 text-xs leading-relaxed" id="modalDetailedOverview">Detailed architecture breakdown goes here. </p>
+          </div>
+          <!-- Key Features Grid -->
+          <div>
+            <h4 class="text-xs font-bold font-display text-slate-900 mb-2 flex items-center gap-1.5">
+              <i class="fa-solid fa-wand-magic-sparkles text-brand-500 text-xs"></i>
+              Key Features 
+              &amp;
+               Implementation 
+            </h4>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2" id="modalFeaturesList">
+              <!-- Dynamic features inserted via JS -->
+            </div>
+          </div>
+          <!-- Technologies Utilized -->
+          <div>
+            <h4 class="text-[10px] font-bold uppercase tracking-wider text-slate-500 mb-1.5">Technologies &amp; Methodologies</h4>
+            <div class="flex flex-wrap gap-1.5" id="modalTechBadges">
+              <!-- Badges inserted via JS -->
+            </div>
+          </div>
+        </div>
+        <!-- Modal Footer Actions -->
+        <div class="p-3.5 bg-slate-50 border-t border-slate-100 flex items-center justify-between gap-2">
+          <button class="px-3.5 py-1.5 rounded-lg border border-slate-200 bg-white hover:bg-slate-100 text-slate-700 text-xs font-bold transition-smooth" id="modalBottomCloseBtn" type="button">Close Preview </button>
+          <div class="flex items-center gap-2">
+            <a class="px-3 py-1.5 rounded-lg border border-slate-200 bg-white hover:bg-brand-50 hover:border-brand-300 text-slate-800 text-xs font-bold transition-smooth inline-flex items-center gap-1.5" href="https://github.com/aaronii46" id="modalGithubLink" rel="noopener noreferrer" target="_blank" title="https://github.com/aaronii46"><i class="fa-brands fa-github text-xs"></i><span class="">GitHub</span></a>
+            <a class="px-3.5 py-1.5 rounded-lg bg-gradient-to-r from-brand-600 to-amber-600 text-white text-xs font-bold shadow-sm hover:shadow transition-smooth inline-flex items-center gap-1.5" href="#contact" id="modalContactCta"><span class="">Inquire System</span><i class="fa-solid fa-paper-plane text-[10px]"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END: ProjectModalDialog -->
+    <script src="script.js"></script>
+  </body>
+</html>
